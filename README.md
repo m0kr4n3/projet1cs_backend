@@ -5,7 +5,7 @@ Back-end du projet 1CS `E-tourisme` avec FastAPI et PostgreSQL
 
 ## Features
 - Docker with [FastAPI](https://fastapi.tiangolo.com/) and [PostgresSQL](https://www.postgresql.org/).
-- Authentication and securing `Item` routes with [JWT tokens](https://jwt.io/)
+- Authentication and securing routes with [JWT tokens](https://jwt.io/)
 - Fastapi which means an interactive API documentation.
 - Scalable and evolutive structure for large projects.
 
