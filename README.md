@@ -1,6 +1,6 @@
-# fastapi_project_template
+# Projet 1CS backend
 
-RESTful Back-end project template with FastAPI + PostgreSQL + JWT + Docker
+Back-end du projet 1CS `E-tourisme` avec FastAPI et PostgreSQL
 
 
 ## Features
@@ -11,8 +11,6 @@ RESTful Back-end project template with FastAPI + PostgreSQL + JWT + Docker
 
 Built on Python: 3.8.
 
-## Routes
-![routes](./routes.png)
 
 ## File Structure
 ```
@@ -25,9 +23,6 @@ Built on Python: 3.8.
 │   └── src
 │       ├── api
 │           ├── endpoints
-│               ├── items.py
-│               ├── user.py
-│               └── login.py
 │           ├── api.py
 │           └── deps.py
 │       ├── core
@@ -35,21 +30,13 @@ Built on Python: 3.8.
 │           └── security.py
 │       ├── crud
 │           ├── base.py
-│           ├── crud_user.py
-│           └── crud_item.py
 │       ├── db
 │           ├── base_class.py
 │           ├── base.py
 │           ├── init_db.py
 │           └── session.py
 │       ├── models
-│           ├── item.py
-│           └── user.py
 │       └── schemas
-│           ├── item.py
-│           ├── msg.py
-│           ├── token.py
-│           └── user.py
 └── docker-compose.yml
 ```
 
