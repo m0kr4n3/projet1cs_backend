@@ -96,3 +96,17 @@ def read_lieux_by_categorie(
     lieux = crud.lieu.get_multi_by(db, "categorie_id",id)
     
     return lieux
+
+
+@router.get("/s/{query}", response_model=List[schemas.Lieu])
+def search_lieux(
+    *,
+    db: Session = Depends(deps.get_db),
+    query: str
+) -> Any:
+    """
+    rechercher lieux.
+    """
+    lieux = crud.lieu.search(query,db)
+    
+    return lieux
