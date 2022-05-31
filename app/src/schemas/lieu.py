@@ -10,6 +10,7 @@ class LieuBase(BaseModel):
     longitude: Optional[float] = None
     latitude: Optional[float] = None
     categorie_id: Optional[int] = None
+    theme_id: Optional[int] = None
 # Properties to receive on item creation
 class LieuCreate(LieuBase):
     nom: str

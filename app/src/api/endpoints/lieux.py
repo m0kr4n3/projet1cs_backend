@@ -83,3 +83,16 @@ def delete_lieu(
 
     lieu = crud.lieu.remove(db=db, id=id)
     return lieu
+
+@router.get("/c/{id}", response_model=List[schemas.Lieu])
+def read_lieux_by_categorie(
+    *,
+    db: Session = Depends(deps.get_db),
+    id: int
+) -> Any:
+    """
+    Retrieve lieux.
+    """
+    lieux = crud.lieu.get_multi_by(db, "categorie_id",id)
+    
+    return lieux
