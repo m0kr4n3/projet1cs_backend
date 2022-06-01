@@ -96,3 +96,16 @@ def read_lieux_by_categorie(
     lieux = crud.lieu.get_multi_by(db, "categorie_id",id)
     
     return lieux
+
+@router.get("/c/{id}", response_model=List[schemas.Lieu])
+def read_lieux_by_theme(
+    *,
+    db: Session = Depends(deps.get_db),
+    id: int
+) -> Any:
+    """
+    Retrieve lieux.
+    """
+    lieux = crud.lieu.get_multi_by(db, "theme_id",id)
+    
+    return lieux

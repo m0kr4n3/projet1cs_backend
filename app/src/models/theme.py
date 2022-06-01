@@ -1,3 +1,4 @@
+from enum import unique
 from sqlalchemy import Column, Integer, String
 from src.db.base_class import Base
 
