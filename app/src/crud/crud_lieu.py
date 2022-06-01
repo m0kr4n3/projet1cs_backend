@@ -2,7 +2,7 @@ from typing import List
 
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
-
+from sqlalchemy import or_
 from src.crud.base import CRUDBase
 from src.models.lieu import Lieu
 from src.schemas.lieu import LieuCreate, LieuUpdate
@@ -29,6 +29,15 @@ class CRUDLieu(CRUDBase[Lieu, LieuCreate, LieuUpdate]):
             .all()
         )
         return result
+
+    def search(
+        self, query: str,db: Session
+    ) -> List[Lieu]:
+        keywords = query.split(' ')
+        filters = [self.model.nom.ilike('%{0}%'.format(k)) for k in keywords]
+        filters += [self.model.description.ilike('%{0}%'.format(k)) for k in keywords]
+        return db.query(self.model).filter(or_(*filters)).all()
+
 
 
 lieu = CRUDLieu(Lieu)
