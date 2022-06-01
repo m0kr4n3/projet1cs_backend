@@ -97,7 +97,7 @@ def read_lieux_by_categorie(
     
     return lieux
 
-@router.get("/c/{id}", response_model=List[schemas.Lieu])
+@router.get("/t/{id}", response_model=List[schemas.Lieu])
 def read_lieux_by_theme(
     *,
     db: Session = Depends(deps.get_db),
