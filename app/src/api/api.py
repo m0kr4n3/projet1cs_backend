@@ -1,4 +1,4 @@
-from src.api.endpoints import login, users, items, lieux,categories, themes
+from src.api.endpoints import login, users, items, lieux,categories, themes, ratings
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from src.core.config import settings
@@ -29,3 +29,4 @@ api.include_router(items.router, prefix="/items", tags=["items"])
 api.include_router(lieux.router, prefix="/lieux", tags=["lieux"])
 api.include_router(categories.router, prefix="/categories", tags=["categories"])
 api.include_router(themes.router, prefix="/themes", tags=["themes"])
+api.include_router(ratings.router, prefix="/ratings", tags=["ratings"])
