@@ -1,3 +1,6 @@
+setup:
+  config:
+    env_file: app/.env
 build:
   docker:
     web: app/Dockerfile
