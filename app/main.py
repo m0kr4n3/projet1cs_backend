@@ -17,4 +17,4 @@ if __name__ == "__main__":
     init_db(db)
     logger.info("Initial data created")
     
-    uvicorn.run("src.api.api:api", host="0.0.0.0", port=8080, reload=True)
+    uvicorn.run("src.api.api:api", host="0.0.0.0", port=80, reload=True)
