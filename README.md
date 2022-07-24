@@ -1,6 +1,6 @@
 # Projet 1CS backend
 
-Back-end du projet 1CS `E-tourisme` avec FastAPI et PostgreSQL
+Back-end du projet 1CS `E-tourisme` avec FastAPI, PostgreSQL, Docker and Heroku.
 
 
 ## Features
